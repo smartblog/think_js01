@@ -21,10 +21,8 @@ function checkTicketFormat(ticketId) {
  * @returns boolean успешна ли проверка
  */
 function checkTime(time) {
-    const date = new Date(time);
-
-    if (!(date instanceof Date && !isNaN(date)))
-        throw new Error('Invalid Registration Time');
+    if (typeof time !== "number")
+        throw new Error('Invalid Time Format');
 
     return true;
 }
