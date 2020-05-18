@@ -90,8 +90,8 @@ function checkPassangerData(ticket, fullName) {
  *
  * @returns boolean успешна ли проверка
  */
-function checkRegTime(registartionEnds, nowTime) {
-    const timeDiff = (registartionEnds - nowTime) / 3600000;
+function checkRegTime(registrationEnds, nowTime) {
+    const timeDiff = (registrationEnds - nowTime) / 3600000;
 
     if ( timeDiff > 1 && timeDiff < 5 ) {
         return true;

@@ -23,7 +23,7 @@ function eRegistration(ticketId, fullName, nowTime) {
 
     checkPassangerData(ticket, fullName);
 
-    if (checkRegTime(flight.registartionEnds, nowTime)) {
+    if (checkRegTime(flight.registrationEnds, nowTime)) {
       ticket.registrationTime = nowTime;
       return true;
     } else {
