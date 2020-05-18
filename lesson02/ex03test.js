@@ -96,7 +96,6 @@ function checkRegTime(registrationEnds, nowTime) {
     if ( timeDiff > 1 && timeDiff < 5 ) {
         return true;
     } else {
-        console.warn("Registration time error")
         return false;
     }
 }
