@@ -17,7 +17,7 @@ function checkTicketFormat(ticketId) {
 
 /**
  * Функция проверки формата времени регистрации
- *
+ * @param {number} time время
  * @returns boolean успешна ли проверка
  */
 function checkTime(time) {
