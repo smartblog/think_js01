@@ -23,11 +23,14 @@ function eRegistration(ticketId, fullName, nowTime) {
 
     checkPassangerData(ticket, fullName);
 
+    if (ticket.registrationTime)
+      throw new Error('Already register');
+
     if (checkRegTime(flight.registrationEnds, nowTime)) {
-      ticket.registrationTime = nowTime;
-      return true;
+        ticket.registrationTime = nowTime;
+        return true;
     } else {
-      return false;
+        return false;
     }
 }
 
