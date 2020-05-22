@@ -1,18 +1,12 @@
 describe('wordStat', () => {
     it('empty value', () => {
-        expect(function () {
-            wordStat();
-        }).to.throw("Value is empty");
+        expect(() => wordStat()).to.throw('Value is empty');
     });
     it('value is not string', () => {
-        expect(function () {
-            wordStat([1, 2, 3]);
-        }).to.throw("Value is not string");
+        expect(() => wordStat([1, 2, 3])).to.throw('Value is not string');
     });
     it('string has not words', () => {
-        expect(function () {
-            wordStat(" ");
-        }).to.throw("String has not words");
+        expect(() => wordStat(" ")).to.throw('String has not words');
     });
     it('with only one word', () => {
         const result = wordStat("Lorem");
@@ -34,14 +28,10 @@ describe('wordStat', () => {
 
 describe('sumCodes', () => {
     it('empty value', () => {
-        expect(function () {
-            sumCodes();
-        }).to.throw("Value is empty");
+        expect(() => sumCodes()).to.throw('Value is empty');
     });
     it('value is not string', () => {
-        expect(function () {
-            sumCodes([1, 2, 3]);
-        }).to.throw("Value is not string");
+        expect(() => sumCodes([1, 2, 3])).to.throw('Value is not string');
     });
     it('with correct data', () => {
         const result = sumCodes("Lorem");

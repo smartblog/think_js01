@@ -7,13 +7,11 @@ const arr = [-91, -93, -45, 67, 96, 40, -34, 96, -42, 58]
  * @returns {Result}
  */
 function sumOfPositive(array) {
-    if (!array) {
+    if (!array)
         throw new Error('Value is empty');
-    };
 
-    if (!Array.isArray(array)) {
+    if (!Array.isArray(array))
         throw new Error('Value is not array');
-    };
 
     if (array.length === 0) {
         return {
@@ -24,9 +22,8 @@ function sumOfPositive(array) {
 
     const checkArray = array.filter(number => isNaN(number));
 
-    if (checkArray.length > 0) {
-        return ('Invalid array');
-    };
+    if (checkArray.length > 0)
+        throw new Error('Invalid array');
 
     const filterArray = array.filter(number => number > 0);
 
