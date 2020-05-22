@@ -8,11 +8,11 @@ const arr = [-91, -93, -45, 67, 96, 40, -34, 96, -42, 58]
  */
 function sumOfPositive(array) {
     if (!array) {
-        return ('Value is empty');
+        throw new Error('Value is empty');
     };
 
     if (!Array.isArray(array)) {
-        return ('Value is not array');
+        throw new Error('Value is not array');
     };
 
     if (array.length === 0) {

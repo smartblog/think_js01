@@ -1,11 +1,14 @@
+
 describe('sumOfPositive', () => {
     it('empty value', () => {
-        const result = sumOfPositive();
-        assert.equal(result, 'Value is empty');
+        expect(function () {
+            sumOfPositive();
+        }).to.throw("Value is empty");
     });
     it('value is not array', () => {
-        const result = sumOfPositive("asd");
-        assert.equal(result, 'Value is not array');
+        expect(function () {
+            sumOfPositive("asd");
+        }).to.throw("Value is not array");
     });
     it('empty array[]', () => {
         const result = sumOfPositive([]);

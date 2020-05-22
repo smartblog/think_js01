@@ -28,13 +28,13 @@
  */
 function wordStat(text) {
     if (!text)
-        return "Value is empty"
+        throw new Error('Value is empty');
 
     if (typeof text !== "string")
-        return "Value is not string"
+        throw new Error('Value is not string');
 
     if (text.replace(/\s+/g, ' ').trim() === "")
-        return "String has not words"
+        throw new Error('String has not words');
 
     const array = text.split(" ");
 
@@ -54,9 +54,10 @@ function wordStat(text) {
  */
 function sumCodes(word) {
     if (!word)
-        return "Value is empty"
+        throw new Error('Value is empty');
+
     if (typeof word !== "string")
-        return "Value is not string"
+        throw new Error('Value is not string');
 
     let sumCodes = 0;
     for ( let i = 0 ; i < word.length ; i++ ) {
