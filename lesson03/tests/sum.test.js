@@ -19,4 +19,8 @@ describe('sumOfPositive', () => {
         const result = sumOfPositive([3, -2, "asd", 6]);
         assert.equal(result, 'Invalid array');
     });
+    it('correct data in array', () => {
+        const result = sumOfPositive([1, 2, 3]);
+        assert.deepEqual(result, {count: 3, sum: 6});
+    });
 });
