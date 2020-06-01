@@ -77,11 +77,7 @@ function Ship(name, model, position) {
 
         _isAnchorDroped = true;
 
-        if (this.isAnchorDroped() == true) {
-            return true
-        } else {
-            return false
-        }
+        return _isAnchorDroped;
     };
 
     /**
@@ -90,11 +86,7 @@ function Ship(name, model, position) {
     this.riseAnchor = () => {
         _isAnchorDroped = false;
 
-        if (this.isAnchorDroped() == false) {
-            return true
-        } else {
-            return false
-        }
+        return !_isAnchorDroped;
     };
 
     function validateValues() {

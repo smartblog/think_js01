@@ -36,21 +36,13 @@ function Student(fio) {
     this.makeSick = () => {
         _isHealthy = false;
 
-        if (_isHealthy == false) {
-            return true
-        } else {
-            return false
-        }
+        return !_isHealthy
     };
 
     this.makeHealthy = () => {
         _isHealthy = true;
 
-        if (_isHealthy == true) {
-            return true
-        } else {
-            return false
-        }
+        return _isHealthy
     };
 
     function validateValues() {
