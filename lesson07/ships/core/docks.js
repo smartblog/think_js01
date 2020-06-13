@@ -14,7 +14,10 @@ function Dock(name, position) {
         if (this.ships[ship.name])
             throw new Error('Dock already moor this ship');
 
-        this.ships[ship.name] = ship;
+        this.ships = {
+            ...this.ships,
+            [ship.name]: ship,
+        };
         return true;
     };
 
