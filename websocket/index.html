@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CHAT!</title>
+    </head>
+
+<body>
+    <div id="hello"></div>
+    <input id="login-input" type="text" placeholder="login" />
+    <button id="login" onclick="loginChannel()">Login</button>
+    <button id="exit" onclick="exit()" style="color: red">Exit</button>
+    <div id="logs"></div>
+
+    <div id="chats" style="padding: 10px; background: #999">
+      <h2>Active Chats</h2>
+    </div>
+
+
+
+    <script src="websocket.js"></script>
+</body>
+
+</html>
